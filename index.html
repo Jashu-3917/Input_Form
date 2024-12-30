@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day2_project</title>
+    <style>
+        html {
+            max-width: 100%;
+            background-image: url(/Images/bg-img5.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #heading {
+            text-align: center;
+            color: rgb(223, 226, 60);
+            text-shadow: 3px 2px 6px;
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+            display: none;
+        }
+
+
+
+        input[type="email"]:focus:valid~img.valid {
+            display: inline;
+            height: 28px;
+            width: 28px;
+            transform: translateY(8px);
+        }
+
+        input[type="email"]:focus:invalid~img.invalid {
+            display: inline;
+            height: 28px;
+            width: 28px;
+            transform: translateY(8px);
+        }
+
+        p {
+            display: none;
+            background-color: rgb(7, 63, 247);
+            color: rgb(248, 249, 247);
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        input:hover+p {
+            display: inline;
+        }
+
+        fieldset {
+            border-color: black;
+            border-radius: 20px;
+            width: 50%;
+            border: 3px solid black;
+        }
+
+        ::placeholder {
+            color: rgb(10, 201, 51);
+        }
+
+        legend {
+            color: aquamarine;
+            font-size: large;
+            font-family: monospace;
+        }
+
+        label {
+            color: rgb(255, 255, 255);
+            font-weight: 650;
+            font-size: large;
+        }
+
+        input:disabled {
+            background-color: rgb(194, 64, 194);
+            font-size: large;
+        }
+
+        input:focus {
+            background: rgb(42, 138, 90);
+        }
+
+        input {
+            margin: 15px;
+            border-bottom: 2px solid #ffffff;
+            color: #060e11;
+            background: transparent;
+            border-radius: 5px;
+            box-shadow: 0px 0px 1px 2px #a67070 inset;
+        }
+
+        textarea {
+            margin: 15px;
+            border: 0px solid transparent;
+            border-bottom: 2px solid white;
+            color: #66a6bb;
+            background: transparent;
+            font-size: 20px;
+        }
+
+        button[type="reset"] {
+            width: 60px;
+            height: 20px;
+            /* background-image: url(C:\Users\gnjas\Downloads\pexels-skylake-29065237.jpg); */
+            border-radius: 3px;
+            background: #dcb366;
+        }
+
+        input[type="radio"] {
+            box-shadow: none;
+        }
+
+        input[type="radio"]:hover {
+            transform: scale(2);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heading">
+        <h1>Course Registration</h1>
+    </div>
+    <div id="responsive">
+
+        <section id="section1">
+
+            <form action="">
+                <fieldset>
+                    <legend>Personal Details</legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="">First Name</label>
+                            </td>
+                            <td>
+                                <input type="text" size="20" placeholder="Ex:ABCD" required>
+                                <P>
+                                    Enter your First Name
+                                </P>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Surname</label>
+                            </td>
+                            <td>
+                                <input type="text" size="20" placeholder="Ex:EFGH">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Mobile Number</label>
+                            </td>
+                            <td>
+                                <input type="tel" name="mobile" id="phonenumber" size="20" placeholder="Ex:987-654-3210"
+                                    required>
+                                <P>
+                                    Enter your Mobile Number
+                                </P>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Email</label>
+                            </td>
+                            <td>
+                                <input type="email" name="mail" id="mailid" size="20" placeholder="Ex:abcd@gmail.com"
+                                    required>
+                                <img class="valid" src="/Images/Valid.png" alt="">
+                                <img class="invalid" src="/Images/invalid.png" alt="">
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Password</label>
+                            </td>
+                            <td>
+                                <input type="password" name="mainpassword" id="password" size="20" minlength="5"
+                                    maxlength="15" placeholder="Min 5 character" required>
+                                <P>
+                                    Enter your Password
+                                </P>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Confirm Password</label>
+                            </td>
+                            <td>
+                                <input type="password" name="confirm password" id="password" size="20" minlength="5"
+                                    maxlength="15" placeholder="min 5 character" required>
+                                <P>
+                                    Confirm your Password
+                                </P>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Date of Birth</label>
+                            </td>
+                            <td>
+                                <input type="date" name="dob" id="dob">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Gender</label>
+                            </td>
+                            <td>
+                                <input type="radio" value="M" name="gender" id="Male">
+                                <label for="">Male</label>
+
+                                <input type="radio" value="F" name="gender" id="Female">
+                                <label for="">Female</label>
+
+                                <input type="radio" value="other" name="gender" id="Custom">
+                                <label for="">Custom</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Select Country</label>
+                            </td>
+
+                            <td>
+                                <select name="countries" id="Country">
+                                    <option value="India" checked>India</option>
+                                    <option value="Sri Lanka">Sri Lanka</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Bangladesh">Bangladesh</option>
+                                    <option value="Russia">Russia</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="">Upload Picture</label>
+                            </td>
+                            <td>
+                                <input type="file" name="files" id="files">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button type="reset">RESET</button>
+                            </td>
+                        </tr>
+
+                    </table>
+                </fieldset>
+            </form>
+        </section>
+        <section id="section2">
+            <form action="">
+                <fieldset>
+                    <legend>
+                        Course Details
+                    </legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="Course selection">Select Course</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select name="Course selection" id="Course">
+                                    <option value="Course">Python Full Stack</option>
+                                    <option value="Course">Java Full Stack</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="delivery">Delivery Mode</label>
+                                &nbsp;
+                                <input type="radio" name="Course" value="online" id="online">
+                                <label for="delivery">Online</label>
+
+                                <input type="radio" name="Course" value="offline" id="Offline">
+                                <label for="Offline">Offline</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="name">
+                                    Institute Name
+                                </label>
+                                <input type="text" placeholder="TAP ACADEMY" disabled>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea name="comment" id="comments" rows="5" cols="50"
+                                    placeholder="comments"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
